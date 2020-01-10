@@ -5,6 +5,7 @@ unit module Array::Shaped::Console:ver<0.0.1>;
 
 constant @grayscale is export= chr(0x25A1)..chr(0x25A9);
 constant @dashes is export = '–'..'―';
+constant @lines is export = '⎽'...'⎺';
 constant $inf-char is export = chr(0x25A0);
 
 sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-symbol = $inf-char  ) is export returns Str {
