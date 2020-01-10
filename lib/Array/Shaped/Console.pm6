@@ -7,17 +7,14 @@ constant @grayscale is export= chr(0x25A1)..chr(0x25A9);
 constant $inf-char is export = chr(0x25A0);
 
 sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-symbol = $inf-char  ) is export returns Str {
-    say @array;
     my @shape = @array.shape;
     my $min = @array.min;
     my $max = @array.max;
-    say "$min , $max";
     my $convert = { ($_ - $min) * @grayscale.elems / (1 + $max - $min ) };
     my $render;
     for ^@shape[0] -> $i {
         for ^@shape[1] -> $j {
 	    if ( @array[$i;$j] ≠ ∞ ) {
-		say "$i, $j ",  @array[$i;$j], " → ", $convert( @array[$i;$j]) ;
 		$render ~= @symbols[$convert(@array[$i;$j])];
 	    } else {
 		$render ~= $non-symbol;
