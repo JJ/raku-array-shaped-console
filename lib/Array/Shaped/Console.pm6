@@ -4,13 +4,14 @@ unit module Array::Shaped::Console:ver<0.0.1>;
 
 
 constant @grayscale is export= chr(0x25A1)..chr(0x25A9);
+constant @dashes is export = '–'..'―';
 constant $inf-char is export = chr(0x25A0);
 
 sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-symbol = $inf-char  ) is export returns Str {
     my @shape = @array.shape;
     my $min = @array.min;
     my $max = @array.max;
-    my $convert = { ($_ - $min) * @grayscale.elems / (1 + $max - $min ) };
+    my $convert = { ($_ - $min) * @symbols.elems / (1 + $max - $min ) };
     my $render;
     for ^@shape[0] -> $i {
         for ^@shape[1] -> $j {
