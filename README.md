@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/JJ/raku-array-shaped-console.svg?branch=master)](https://travis-ci.org/JJ/raku-array-shaped-console)
+[![Build Status](https://travis-ci.com/JJ/raku-array-shaped-console.svg?branch=master)](https://travis-ci.com/JJ/raku-array-shaped-console)
 
 NAME
 ====
