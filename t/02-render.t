@@ -18,5 +18,9 @@ is printed( @array, @lines ), "⎽⎼\n⎻⎺\n", "Prints with dashes";
 my @thirds[3;3] Z= 1..9;
 is printed(@thirds), "□▢▣\n▤▥▦\n▧▨▩\n", "Spans range";
 
+my @rows-four[4;2] Z= 1..8;
+is printed(@rows-four, @left), "▏▎\n▍▌\n▋▊\n▉█\n", "Non-square stuff";
+
+
 
 done-testing;
