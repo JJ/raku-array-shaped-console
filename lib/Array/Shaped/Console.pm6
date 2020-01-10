@@ -6,6 +6,9 @@ unit module Array::Shaped::Console:ver<0.0.1>;
 constant @grayscale is export= chr(0x25A1)..chr(0x25A9);
 constant @dashes is export = '–'..'―';
 constant @lines is export = '⎽'...'⎺';
+constant @shades is export = '░'..'▓';
+constant @lower is export = '▁'..'█';
+constant @left is export = '▏'...'█';
 constant $inf-char is export = chr(0x25A0);
 
 sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-symbol = $inf-char  ) is export returns Str {
@@ -53,6 +56,22 @@ say printed( @array );
 =head1 DESCRIPTION
 
 Array::Shaped::Console includes functions and ranges to easily render numeric 2d arrays to the console, using the same shape of the array, and adapting the array range to the number of symbols that are also handled in the function.
+
+These arrays and "infinity" symbol are predefined;
+
+@grayscale = chr(0x25A1)..chr(0x25A9);
+@dashes  = '–'..'―';
+@lines  = '⎽'...'⎺';
+@shades  = '░'..'▓';
+@lower  = '▁'..'█';
+@left  = '▏'...'█';
+$inf-char  = chr(0x25A0);
+
+@grayscale is used by default.
+
+=head2 method printed( @array, @shapes = @grayscale, $non-symbol = $inf-char)
+
+Returns a string that collates, using the array shape, in a single string that separates rows by a carriage return.
 
 =head1 AUTHOR
 
