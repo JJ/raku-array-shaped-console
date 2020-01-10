@@ -40,6 +40,15 @@ Array::Shaped::Console - Renders 2d arrays to a console using block symbols
 
 use Array::Shaped::Console;
 
+my @array[2;2] = (-1,1;1,-1);
+# Prints "□▧\n▧□\n"  using default "grayscale" console symbols array
+printed(@array).say;
+
+# Prints "□■\n■□\n" with infinity having a special default symbol.
+@array = (-1,Inf;Inf,-1);
+say printed( @array );
+
+
 =end code
 
 =head1 DESCRIPTION
