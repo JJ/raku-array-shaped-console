@@ -27,7 +27,15 @@ Array::Shaped::Console includes functions and ranges to easily render numeric 2d
 
 These arrays and "infinity" symbol are predefined;
 
-@grayscale = chr(0x25A1)..chr(0x25A9); @dashes = '–'..'―'; @lines = '⎽'...'⎺'; @shades = '░'..'▓'; @lower = '▁'..'█'; @left = '▏'...'█'; $inf-char = chr(0x25A0);
+    @grayscale = chr(0x25A1)..chr(0x25A9);
+	@dashes = '–'..'―';
+	@lines = '⎽'...'⎺';
+	@shades = '░'..'▓';
+	@lower = '▁'..'█';
+	@left = '▏'...'█';
+	@squares = <▪◾◼>;
+	@chars = ".:-=+*#%@".comb;
+	$inf-char = chr(0x25A0);
 
 @grayscale is used by default.
 

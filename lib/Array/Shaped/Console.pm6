@@ -9,7 +9,9 @@ constant @lines is export = '⎽'...'⎺';
 constant @shades is export = '░'..'▓';
 constant @lower is export = '▁'..'█';
 constant @left is export = '▏'...'█';
+constant @squares is export = <▪◾◼>;
 constant $inf-char is export = chr(0x25A0);
+constant @chars is export = ".:-=+*#%@".comb;
 
 sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-symbol = $inf-char  ) is export returns Str {
     my @shape = @array.shape;
