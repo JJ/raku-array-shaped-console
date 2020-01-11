@@ -1,6 +1,6 @@
 use v6.c;
 
-unit module Array::Shaped::Console:ver<0.0.1>;
+unit module Array::Shaped::Console:ver<0.0.2>;
 
 
 constant @grayscale is export= chr(0x25A1)..chr(0x25A9);
