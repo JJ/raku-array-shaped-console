@@ -21,7 +21,7 @@ sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-s
     my $render;
     for ^@shape[0] -> $i {
         for ^@shape[1] -> $j {
-	    if ( @array[$i;$j] ≠ ∞ ) {
+	    if ( @array[$i;$j] ≠ any(∞, -∞) ) {
 		$render ~= @symbols[$convert(@array[$i;$j])];
 	    } else {
 		$render ~= $non-symbol;
