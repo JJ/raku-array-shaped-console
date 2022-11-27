@@ -15,7 +15,7 @@ constant @chars is export = ".:-=+*#%@".comb;
 
 sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-symbol = $inf-char  ) is export returns Str {
     my @shape = @array.shape;
-    my $min = @array.min;
+    my $min = @array.grep( * ≠ -∞).min;
     my $max = @array.grep( * ≠ ∞).max;
     my $convert = { ($_ - $min) * @symbols.elems / (1 + $max - $min ) };
     my $render;
