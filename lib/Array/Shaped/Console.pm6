@@ -10,7 +10,10 @@ constant @squares is export = <▪◾◼>;
 constant $inf-char is export = chr(0x25A0);
 constant @chars is export = ".:-=+*#%@".comb;
 
-sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-symbol = $inf-char  ) is export returns Str {
+sub printed( @array where @array.shape.elems == 2,
+             @symbols = @grayscale,
+             $non-symbol = $inf-char
+            ) is export returns Str {
     my @shape = @array.shape;
     my $min = @array.grep( * ≠ -∞).min;
     my $max = @array.grep( * ≠ ∞).max;
@@ -18,11 +21,11 @@ sub printed( @array where @array.shape.elems == 2, @symbols = @grayscale, $non-s
     my $render;
     for ^@shape[0] -> $i {
         for ^@shape[1] -> $j {
-	    if ( @array[$i;$j] ≠ any(∞, -∞) ) {
-		$render ~= @symbols[$convert(@array[$i;$j])];
-	    } else {
-		$render ~= $non-symbol;
-	    }
+	        if ( @array[$i;$j] ≠ any(∞, -∞) ) {
+		        $render ~= @symbols[$convert(@array[$i;$j])];
+	        } else {
+		        $render ~= $non-symbol;
+	        }
         }
         $render ~= "\n";
     }
