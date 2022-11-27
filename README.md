@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.com/JJ/raku-array-shaped-console.svg?branch=master)](https://travis-ci.com/JJ/raku-array-shaped-console)
-
 NAME
 ====
 
@@ -8,7 +6,7 @@ Array::Shaped::Console - Renders 2d arrays to a console using block symbols
 SYNOPSIS
 ========
 
-```perl6
+```raku
 use Array::Shaped::Console;
 
 my @array[2;2] = (-1,1;1,-1);
@@ -23,9 +21,12 @@ say printed( @array );
 DESCRIPTION
 ===========
 
-Array::Shaped::Console includes functions and ranges to easily render numeric 2d arrays to the console, using the same shape of the array, and adapting the array range to the number of symbols that are also handled in the function.
+Array::Shaped::Console includes functions and ranges to easily render
+numeric 2d arrays to the console, using the same shape of the array,
+and adapting the array range to the number of symbols that are also
+handled in the function.
 
-These arrays and "infinity" symbol are predefined;
+These arrays, as well as the "infinity" symbol, are predefined;
 
     @grayscale = chr(0x25A1)..chr(0x25A9);
 	@dashes = '–'..'―';
@@ -52,7 +53,7 @@ JJ Merelo <jjmerelo@gmail.com>
 COPYRIGHT AND LICENSE
 =====================
 
-Copyright 2020 JJ Merelo
+Copyright 2020-2022 JJ Merelo
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
