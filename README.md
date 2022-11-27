@@ -1,4 +1,4 @@
-NAME
+NAME [![Test-install distro](https://github.com/JJ/raku-array-shaped-console/actions/workflows/test.yaml/badge.svg)](https://github.com/JJ/raku-array-shaped-console/actions/workflows/test.yaml)
 ====
 
 Array::Shaped::Console - Renders 2d arrays to a console using block symbols
