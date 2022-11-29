@@ -27,6 +27,8 @@ is printed(@rows-four, @left), "▏▎\n▍▌\n▋▊\n▉█\n", "Non-square s
 my @seq-row[1;3] = [1..3,];
 is printed(@seq-row,@squares), "▪◾◼\n", "Squares";
 
+my @ya-seq-row[1;4] = [1..4,];
+is printed(@ya-seq-row,@circles), "◌○◍●\n", "Circles";
 
 
 done-testing;
