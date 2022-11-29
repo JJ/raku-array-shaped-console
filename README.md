@@ -26,7 +26,7 @@ numeric 2d arrays to the console, using the same shape of the array,
 and adapting the array range to the number of symbols that are also
 handled in the function.
 
-These arrays, as well as the "infinity" symbol, are predefined;
+These symbol sets, as well as the "infinity" symbol, are predefined;
 
     @grayscale = chr(0x25A1)..chr(0x25A9);
 	@dashes = '–'..'―';
@@ -34,7 +34,8 @@ These arrays, as well as the "infinity" symbol, are predefined;
 	@shades = '░'..'▓';
 	@lower = '▁'..'█';
 	@left = '▏'...'█';
-	@squares = <▪◾◼>;
+	@squares = <▪ ◾ ◼>;
+	@circles = <◌ ○ ◍ ●>;
 	@chars = ".:-=+*#%@".comb;
 	$inf-char = chr(0x25A0);
 
