@@ -24,6 +24,9 @@ is printed(@thirds), "□▢▣\n▤▥▦\n▧▨▩\n", "Spans range";
 my @rows-four[4;2] Z= 1..8;
 is printed(@rows-four, @left), "▏▎\n▍▌\n▋▊\n▉█\n", "Non-square stuff";
 
+my @seq-row[1;3] = [1..3,];
+is printed(@seq-row,@squares), "▪◾◼\n", "Squares";
+
 
 
 done-testing;
